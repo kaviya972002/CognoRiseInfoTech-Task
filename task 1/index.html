@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+     <nav>
+        <img src="img/logo (2).png" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+     </nav>
+     <div class="header-text">
+        <p>web developer</p>
+        <h1>hi, i am <span>kaviya S M</span> <br>from Chennai</h1>
+     </div>
+    </div>
+
+</div>
+-<!--about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/kavi.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>my self kaviya,am doing final year of Computer Science and Engineering in Jeppiaar Engineering College ,Chennai.To secure a position as computer engineering with a major tech company
+                    where I can use my skill to develop groundbreaking new technologies.
+                    Looking for a chance in a company that helps me give my absolute best
+                    and enhance my abilities in the engineering field. I will do my best to
+                    meet the expectations of the company. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Android/ios apps</li>
+                    </ul>
+                </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                
+                         <li><span>2020</span><br>completed my schooling</li>
+                         <li><span>2020-2024</span><br>doing engineering</li>
+                    </ul>
+                    
+                </div>
+        </div>
+    </div>
+</div>
+    <!---------services--------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p> the process of planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>App development</h2>
+                    <p> the process of making software for smartphones, tablets and digital assistants, most commonly for the Android and iOS operating systems. </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX</h2>
+                    <p> UX design is all about identifying and solving user problems; UI design is all about creating intuitive, aesthetically-pleasing, interactive interfaces</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-------------Portfolio------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="img/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>the app connects you to the talented people around the world.</p>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-2.png"> <div class="layer">
+                        <h3>Music App</h3>
+                        <p>to play music available in the databases of the service, compose custom playlists and suggest similar songs.</p>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/work-3.png"> <div class="layer">
+                        <h3>online shopping App</h3>
+                        <p>a form of electronic commerce which allows consumers to directly buy goods or services from a seller over the Internet using a web browser or a mobile app</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+<!------------contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><img src="img/email .png">abc@example.com</p>
+                <p><img src="img/Phone.png">0123456789</p>
+                 <a href="img/my-cv.pdf" download class="btn btn2">Download cv</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
